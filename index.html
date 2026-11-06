@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171b1b">
+  <title>02:13 — The person outside</title>
+  <link rel="stylesheet" href="style.css?v=playtest-6">
+  <script src="engine.js?v=playtest-6" defer></script>
+  <script src="game.js?v=playtest-6" defer></script>
+</head>
+<body>
+  <main class="setup">
+    <header class="outside"><span>The person outside</span><span>Chapter one · playable draft</span></header>
+    <section class="monitor" aria-label="Interactive fiction computer">
+      <div class="tube">
+        <div class="screen-bar"><span id="place">A house you remember</span><span id="time">02:13</span></div>
+        <div id="boot" class="boot">
+          <span class="boot-edition">A story told through a keyboard</span>
+          <h1>02<span>:</span>13</h1>
+          <p class="subtitle">The person outside</p>
+          <p class="opening">Your sister has been missing for three days.<br>Tonight, a message arrives from her.</p>
+          <button id="begin" type="button">Press Enter to wake up</button>
+          <p class="boot-note">Read the room. Decide what to do. Type it.<br>English input. Headphones optional.</p>
+          <p class="content-note">Psychological horror · death of a family member</p>
+        </div>
+        <section id="play" class="play" hidden aria-label="Game">
+          <div id="transcript" class="transcript" role="log" aria-label="Story transcript" aria-live="polite" aria-relevant="additions" tabindex="0"></div>
+          <button id="latest" type="button" hidden>Return to the latest line</button>
+          <button id="continue" type="button" hidden>Continue <span>Enter ↵</span></button>
+          <form id="command-form" autocomplete="off">
+            <label for="command" id="prompt"><span id="context">Room</span><span aria-hidden="true">&gt;</span></label>
+            <input id="command" name="command" aria-label="Type your action in English" maxlength="240" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="send">
+          </form>
+          <div class="screen-bottom"><span id="save-status" role="status">Your progress stays in this browser.</span><span id="mode-note">Keyboard input</span></div>
+        </section>
+      </div>
+      <div class="bezel"><span class="computer-name">Hearth <b>128</b></span><div class="vent" aria-hidden="true"></div><span class="power-light" aria-label="Power on"></span></div>
+    </section>
+    <footer class="controls"><span>No one else should be awake.</span><div><button id="audio" type="button" aria-pressed="false">Sound off</button><button id="restart" type="button">New night</button></div></footer>
+    <p class="storage-error" id="storage-error" hidden></p>
+  </main>
+</body>
+</html>
